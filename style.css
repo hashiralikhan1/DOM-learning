@@ -18,7 +18,7 @@ p.js-result, .main_heading {
                     max-width: 50px;
                     max-height: 50px;
                 }
-        body{
+        body, h2 a{
             background-color: black;
             color: #fff;
         }
