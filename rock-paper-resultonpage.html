@@ -4,8 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booleans</title>
+    <title>Rock Paper Scissor</title>
     <style>
+        p.js-result, .main_heading {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+        .reset-btn{
+                padding: 10px 25px;
+                cursor: pointer;
+        }
+        .game-icon {
+                    background: black;
+                    border-radius: 50px;
+                    border: 3px solid #fff;
+                    padding: 20px;
+                    cursor: pointer;
+                }
+                .game-icon img, .game-ion img {
+                    max-width: 50px;
+                    max-height: 50px;
+                }
+        body{
+            background-color: black;
+            color: #fff;
+        }
         .red-button {
             background-color: aqua;
             color: black;
@@ -19,28 +43,32 @@
 </head>
 
 <body>
-    <p>Rock Paper Scissor Game</p>
-    <button onclick=" 
+    <p class="main_heading">Rock Paper Scissor Game</p>
+    <button class="game-icon" onclick=" 
    playGame('rock');
   
-   ">Rock</button>
+   "><img src="/images/rock-emoji.png" alt="" srcset=""> </button>
 
-    <button onclick=" 
+    <button class="game-icon" onclick=" 
    
    playGame('paper');
   
-   ">Paper</button>
+   "><img src="/images/paper-emoji.png" alt="" srcset=""> </button>
 
-    <button onclick=" 
+    <button class="game-icon" onclick=" 
    playGame('Scissor');
    
-   ">Scissor</button>
+   "><img src="/images/scissor-emoji.png" alt="" srcset=""> </button>
 
    <p class="js-result"></p>
-   <p class="js-moves"></p>
+   <p class="js-moves game-ion">
+   
+   </p>
+
+
    <p class="js-score"></p>
 
-    <button onclick=" 
+    <button class="reset-btn" onclick=" 
    score.wins=0;
    score.ties=0;
    score.losses=0;
@@ -127,7 +155,12 @@
             
             updateScoreElement();
             document.querySelector('.js-result').innerHTML = result;
-            document.querySelector('.js-moves').innerHTML = `you ${playerMove}, Computer Picked ${computerMove}`;
+            document.querySelector('.js-moves').innerHTML = 
+            `
+             You <img src="/images/${playerMove}-emoji.png">
+    <img src="/images/${computerMove}-emoji.png" alt="" srcset="">
+    Computer`
+            ;
 
     //         alert(`you picked ${playerMove} computer pick ${computerMove}, ${result}
     //  wins : ${score.wins}, Losses : ${score.losses}, Ties : ${score.ties}
