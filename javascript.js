@@ -70,8 +70,8 @@
             document.querySelector('.js-result').innerHTML = result;
             document.querySelector('.js-moves').innerHTML = 
             `
-             You <img src="/images/${playerMove}-emoji.png">
-    <img src="/images/${computerMove}-emoji.png" alt="" srcset="">
+             You <img src="./images/${playerMove}-emoji.png">
+    <img src="./images/${computerMove}-emoji.png" alt="" srcset="">
     Computer`
             ;
 
